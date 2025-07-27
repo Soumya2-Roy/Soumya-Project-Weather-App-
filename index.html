@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather in App</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="day"> <!-- Default to day; changed by JS -->
+  <div class="background-decor"></div>
+
+  <div class="container my-5">
+    <!-- Title -->
+    <h1 class="text-center title mb-4">Weather in</h1>
+
+    <!-- Search Box -->
+    <form class="search-loaction mb-4">
+      <input
+        type="text"
+        name="city"
+        placeholder="What city?"
+        autocomplete="off"
+        class="form-control text-muted form-rounded p-4 shadow-sm"
+      />
+    </form>
+
+    <!-- Weather Card -->
+    <div class="card rounded shadow-lg d-none back-card">
+      <!-- Card Top -->
+      <div class="card-top text-center position-relative">
+        <div class="city-name my-3">
+          <p class="h5 city mb-0">City</p>
+          <span class="h3 country text-muted">...</span>
+        </div>
+        <img src="img/day_image.svg" alt="Time Image" class="card-img-top time" />
+      </div>
+
+      <!-- Card Body -->
+      <div class="card-body">
+        <!-- Mid Info -->
+        <div class="card-mid row align-items-center">
+          <div class="col-8 text-center temp">
+            <span class="display-4">30°C</span>
+          </div>
+          <div class="col-4 condition-temp text-left">
+            <p class="condition h5">Thunder Storm</p>
+            <p class="high text-muted">High: 30°C</p>
+            <p class="low text-muted">Low: 27°C</p>
+          </div>
+        </div>
+
+        <!-- Weather Icon -->
+        <div class="icon-container card shadow mx-auto my-3">
+          <img src="img/cloud.svg" alt="Weather Icon" />
+        </div>
+
+        <!-- Bottom Info -->
+        <div class="card-bottom px-4 py-3 row">
+          <div class="col text-center">
+            <p class="mb-1 feels-like display-5">30°C</p>
+            <span class="text-muted small-label">Feels Like</span>
+          </div>
+          <div class="col text-center">
+            <p class="mb-1 humidity display-5">55%</p>
+            <span class="text-muted small-label">Humidity</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS Files -->
+  <script src="request.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
